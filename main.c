@@ -10,6 +10,7 @@ int main ()
 
 	while (ch = getch ())
 	{
+		printf ("%c\n", ch);
 		if (ch == 'a')
 			boat_turnleft ();
 		else if (ch == 'd')
