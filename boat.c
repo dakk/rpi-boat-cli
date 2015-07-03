@@ -1,13 +1,16 @@
 #include <wiringPi.h>
+#include <wpiExtensions.h>
+#include <gertboard.h>
+#include <piFace.h>
 
 #include "boat.h"
+
+int wpMode = WPI_MODE_GPIO;
 
 void motor_init ()
 {
 	wiringPiSetup ();
 	wiringPiSetupGpio ();
-
-	wpMode = WPI_MODE_GPIO;
 
 	pinMode (MOTOR_GPIO_LEFT, OUTPUT);
 	pinMode (MOTOR_GPIO_RIGHT, OUTPUT);
@@ -18,13 +21,13 @@ void motor_init ()
 
 void motor_enable (unsigned motor)
 {
-	digitalWrite (motor, 0);
+	digitalWrite (motor, LOW);
 }
 
 
 void motor_disable (unsigned motor)
 {
-	digitalWrite (motor, 1);
+	digitalWrite (motor, HIGH);
 }
 
 
