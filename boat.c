@@ -9,24 +9,27 @@ int wpMode = WPI_MODE_GPIO;
 
 void motor_init ()
 {
-	wiringPiSetup ();
 	wiringPiSetupGpio ();
-
 	pinMode (MOTOR_GPIO_LEFT, OUTPUT);
+	wiringPiSetupGpio ();
 	pinMode (MOTOR_GPIO_RIGHT, OUTPUT);
 
+	wiringPiSetupGpio ();
 	motor_disable (MOTOR_GPIO_LEFT);
+	wiringPiSetupGpio ();
 	motor_disable (MOTOR_GPIO_RIGHT);
 }
 
 void motor_enable (unsigned motor)
 {
+	wiringPiSetupGpio ();
 	digitalWrite (motor, LOW);
 }
 
 
 void motor_disable (unsigned motor)
 {
+	wiringPiSetupGpio ();
 	digitalWrite (motor, HIGH);
 }
 
