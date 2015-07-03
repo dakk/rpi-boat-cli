@@ -13,12 +13,15 @@ int main ()
 			boat_turnleft ();
 		else if (ch == 'd')
 			boat_turnright ();
-		else if (ch == 'q')
-			return 0;
 		else if (ch == 's')
 			boat_stop ();
 		else if (ch == 'w')
 			boat_gocenter ();
+		else if (ch == 'q'){
+			boat_stop ();
+			return 0;
+		}
+
 	}
 
 	return 0;
