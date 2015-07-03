@@ -1,5 +1,5 @@
 #include <stdio.h>
-
+#include <curses.h>
 #include "boat.h"
 
 int main ()
@@ -8,7 +8,7 @@ int main ()
 	boat_init ();
 	boat_stop ();
 
-	while (ch = getchar ())
+	while (ch = getch ())
 	{
 		if (ch == 'a')
 			boat_turnleft ();
