@@ -5,6 +5,8 @@
 void motor_init ()
 {
 	wiringPiSetup ();
+	wiringPiSetupGpio ();
+
 	pinMode (MOTOR_GPIO_LEFT, OUTPUT) ;
 	pinMode (MOTOR_GPIO_RIGHT, OUTPUT) ;
 	motor_disable (MOTOR_GPIO_LEFT);
