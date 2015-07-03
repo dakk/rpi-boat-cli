@@ -36,6 +36,7 @@ void motor_disable (unsigned motor)
 
 void boat_turnleft ()
 {
+	motor_disable (MOTOR_GPIO_RIGHT);
 	motor_enable (MOTOR_GPIO_LEFT);
 }
 
@@ -47,6 +48,7 @@ void boat_gocenter ()
 
 void boat_turnright ()
 {
+	motor_disable (MOTOR_GPIO_LEFT);
 	motor_enable (MOTOR_GPIO_RIGHT);
 }
 
