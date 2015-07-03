@@ -8,7 +8,7 @@ int main ()
 	boat_init ();
 	boat_stop ();
 
-	while (ch = getch ())
+	while (ch = getchar ())
 	{
 		if (ch != 'a' && ch != 'd' && ch != 's' && ch != 'q' && ch != 'w')
 			continue;
