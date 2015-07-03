@@ -1,5 +1,4 @@
 #include <stdio.h>
-#include <curses.h>
 #include "boat.h"
 
 int main ()
@@ -10,10 +9,6 @@ int main ()
 
 	while (ch = getchar ())
 	{
-		if (ch != 'a' && ch != 'd' && ch != 's' && ch != 'q' && ch != 'w')
-			continue;
-
-		printf ("%c\n", ch);
 		if (ch == 'a')
 			boat_turnleft ();
 		else if (ch == 'd')
