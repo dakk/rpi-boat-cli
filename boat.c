@@ -23,14 +23,14 @@ void motor_init ()
 void motor_enable (unsigned motor)
 {
 	wiringPiSetupGpio ();
-	digitalWrite (motor, LOW);
+	digitalWrite (motor, HIGH);
 }
 
 
 void motor_disable (unsigned motor)
 {
 	wiringPiSetupGpio ();
-	digitalWrite (motor, HIGH);
+	digitalWrite (motor, LOW);
 }
 
 
