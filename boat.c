@@ -7,21 +7,24 @@ void motor_init ()
 	wiringPiSetup ();
 	wiringPiSetupGpio ();
 
-	pinMode (MOTOR_GPIO_LEFT, OUTPUT) ;
-	pinMode (MOTOR_GPIO_RIGHT, OUTPUT) ;
+	wpMode = WPI_MODE_GPIO;
+
+	pinMode (MOTOR_GPIO_LEFT, OUTPUT);
+	pinMode (MOTOR_GPIO_RIGHT, OUTPUT);
+
 	motor_disable (MOTOR_GPIO_LEFT);
 	motor_disable (MOTOR_GPIO_RIGHT);
 }
 
 void motor_enable (unsigned motor)
 {
-	digitalWrite (motor, 0) ;
+	digitalWrite (motor, 0);
 }
 
 
 void motor_disable (unsigned motor)
 {
-	digitalWrite (motor, 1) ;
+	digitalWrite (motor, 1);
 }
 
 
